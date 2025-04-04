@@ -10,25 +10,22 @@ const messages = [
 function App() {
 
   const [step, setStep] = useState(1);
-  const [test, setTest] = useState({ name: "Mihraç" });
   const [isOpen, setIsOpen] = useState(true);
 
   function handlePrevıous() {
     if (step > 1) {
-      setStep(step - 1);
+      setStep(s => s - 1);
     };
   };
 
   function handleNext() {
     if (step < 3) {
-      setStep(step + 1);
-
-      setTest({ name: "Jonas" });
+      setStep(s => s + 1);
     };
   };
 
   function handleClose() {
-    setIsOpen(!isOpen);
+    setIsOpen(is => !is);
 
     setStep(1);
   };
@@ -53,7 +50,7 @@ function App() {
 
           <div className="message">
 
-            <p>Step {step}: {messages[step - 1]} {test.name}</p>
+            <p>Step {step}: {messages[step - 1]}</p>
 
           </div>
 

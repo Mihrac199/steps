@@ -54,13 +54,18 @@ function App() {
 
           </div>
 
-
           <div className="buttons">
 
-            <button className="btn" onClick={handlePrevıous}>Prevıous</button>
-            <button className="btn" onClick={handleNext}>Next</button>
+            <Button onClick={handlePrevıous}>
+              <span>◀︎</span> Prevıous
+            </Button>
+
+            <Button onClick={handleNext}>
+              Next <span>▶︎</span>
+            </Button>
 
           </div>
+
 
         </div>
 
@@ -72,3 +77,14 @@ function App() {
 
 };
 export default App;
+
+
+function Button({ onClick, children }) {
+
+  return (
+
+    <button className="btn" onClick={onClick}>{children}</button>
+
+  );
+
+};

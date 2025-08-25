@@ -1,3 +1,7 @@
-# Steps Project (React)
+# Steps Project
 
-A small step application.
+Used Technologies;
+
+     1) CSS 3 
+     2) React
+          - Create React App
